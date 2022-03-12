@@ -21,9 +21,10 @@
         font-size: 80px;
     }
 
-    form {
+    .weather-form {
         max-width: 500px;
         width: 100%;
+        margin: 0 0 20px 0;
 
         .city {
             padding: 10px 20px;
@@ -33,6 +34,43 @@
             text-align: center;
             border: none;
             border-radius: 5px;
+        }
+    }
+
+    .loader {
+        display: none;
+    }
+
+    .api-data {
+        .main-info {
+            display: flex;
+            align-items: center;
+            background-color: $backgroundColor;
+            padding: 30px;
+            color: $mainInfoTextColor;
+            border-radius: 10px;
+
+            .degrees {
+                display: flex;
+                font-size: 40px;
+                margin: 0 20px;
+
+                span {
+                    margin: 0 0 0 10px;
+                    font-size: 14px;
+                }
+            }
+
+            .info {
+                p {
+                    margin: 0 0 4px 0;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
         }
     }
 }
