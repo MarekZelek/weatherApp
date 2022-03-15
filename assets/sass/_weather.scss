@@ -73,4 +73,15 @@
 
         }
     }
+
+    .error {
+        background-color: $backgroundErrorColor;
+        color: $primaryColor;
+        border: 5px;
+        border-radius: 10px;
+        border-color: $backgroundColor;
+        padding: 10px 30px;
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
 }

@@ -10,7 +10,15 @@ weatherForm.addEventListener('submit', (event) => {
     let userApiURL = apiURL + userCity
 
     fetch(userApiURL)
-        .then(response => response.json())
+        .then(response => {
+
+            if (response.status === 200) {
+                return response.json()
+            }
+            else {
+                return showError()
+            }
+        })
         .then((dataFromAPI) => {
 
             hideLoader();
@@ -64,4 +72,11 @@ let showLoader = () => {
 
 let hideLoader = () => {
     loader.style.display = 'none'
+}
+
+let showError = () => {
+    apiDataContainer.innerHTML = `
+    <div class = "error"> Sorry, this is not the city you are looking for! Or it's just problem with our API:) Try again.
+    </div>`
+
 }

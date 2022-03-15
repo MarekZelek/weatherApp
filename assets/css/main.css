@@ -96,6 +96,16 @@ h6 {
 .weather .api-data .main-info .info p:last-of-type {
   margin-bottom: 0;
 }
+.weather .error {
+  background-color: #d10c0c;
+  color: #fff;
+  border: 5px;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 30px;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
 
 .lds-ripple {
   display: inline-block;
